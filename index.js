@@ -1,6 +1,24 @@
 import PromptSync from "prompt-sync"
 
+import chalk from "chalk"
+
 const prompt = PromptSync()
+
+let x = 0
+
+let valor = Number(prompt("Digite quantos números deseja informar: "))
+
+let soma = 0
+
+while(x < valor){
+    soma += Number(prompt(chalk.bgGreen.blue(`Digite o ${x+1}º número: `)))
+    x++
+}
+
+const media = soma/valor
+
+console.log(chalk.bgCyan.red(`A média dos números é: ${media}`))
+
 
 /*const nome = prompt("Digite seu nome: ")
 
@@ -29,6 +47,7 @@ const salFinal = salario*(1+(porcentagem/100))
 console.log(`Seu salário após o aumento é R${salFinal}`)
 */
 
+/* EXERCÍCIO - HABILITAÇÃO
 const nascimento = prompt("Digite seu ano de nascimento: ")
 
 const dataAtual = new Date()
@@ -44,4 +63,6 @@ else if(idade <= 0){
 }
 else{
     console.log(`Você não pode tirar habilitação ainda!`)
-}
+}*/
+
+
